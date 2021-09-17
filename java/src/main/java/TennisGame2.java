@@ -1,7 +1,7 @@
 
 public class TennisGame2 implements TennisGame
 {
-    //6th commit...
+    //7th commit...
     public int P1point = 0;
     public int P2point = 0;
     
@@ -27,12 +27,7 @@ public class TennisGame2 implements TennisGame
         if (P1point==P2point && P1point>=3)
             score = "Deuce";
         
-        if ( (P1point > 0 && P2point==0 && P1point < 4) || (P2point > 0 && P1point == 0 && P2point < 4) )
-        {
-            score = scoreTitle[P1point] + "-" + scoreTitle[P2point];
-        }
-        
-        if ( (P1point > P2point && P1point < 4) || (P2point > P1point && P2point < 4) )
+        if (P1point != P2point && P1point < 4 && P2point < 4)
         {
             score = scoreTitle[P1point] + "-" + scoreTitle[P2point];
         }
