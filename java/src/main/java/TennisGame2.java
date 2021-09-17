@@ -1,7 +1,7 @@
 
 public class TennisGame2 implements TennisGame
 {
-    //4th commit and push...
+    //5th commit...
     public int P1point = 0;
     public int P2point = 0;
     
@@ -27,22 +27,18 @@ public class TennisGame2 implements TennisGame
         if (P1point==P2point && P1point>=3)
             score = "Deuce";
         
-        if (P1point > 0 && P2point==0)
+        if (P1point > 0 && P2point==0 && P1point < 4)
         {
             P2res = "Love";
             score = scoreTitle[P1point] + "-" + P2res;
         }
-        if (P2point > 0 && P1point==0)
+        if (P2point > 0 && P1point==0 && P1point < 4)
         {
             P1res = "Love";
             score = P1res + "-" + scoreTitle[P2point];
         }
         
-        if (P1point>P2point && P1point < 4)
-        {
-            score = scoreTitle[P1point] + "-" + scoreTitle[P2point];
-        }
-        if (P2point>P1point && P2point < 4)
+        if ( (P1point > P2point && P1point < 4) || (P2point > P1point && P2point < 4) )
         {
             score = scoreTitle[P1point] + "-" + scoreTitle[P2point];
         }
@@ -57,11 +53,11 @@ public class TennisGame2 implements TennisGame
         	score = "Advantage " + player2Name;
         }
         
-        if (P1point>=4 && P2point>=0 && (scoreDiff)>=2)
+        if (P1point>=4 && (scoreDiff)>=2)
         {
             score = "Win for player1";
         }
-        if (P2point>=4 && P1point>=0 && -(scoreDiff)>=2)
+        if (P2point>=4 && -(scoreDiff)>=2)
         {
             score = "Win for player2";
         }
