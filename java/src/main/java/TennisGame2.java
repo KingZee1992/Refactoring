@@ -1,10 +1,10 @@
-
 public class TennisGame2 implements TennisGame
 {
-    //7th commit...
+	
+	//8th commit...
     public int P1point = 0;
     public int P2point = 0;
-    
+ 
     public String P1res = "";
     public String P2res = "";
     private String player1Name;
@@ -16,16 +16,20 @@ public class TennisGame2 implements TennisGame
     }
 
     public String getScore(){
+    	
         String score = "";
         String[] scoreTitle = new String[]{"Love", "Fifteen", "Thirty", "Forty"};
         int scoreDiff = P1point - P2point;
-
-        if (P1point == P2point && P1point < 4)
+        
+        if (P1point == P2point && P1point < 3)
         {
             score = scoreTitle[P1point] + "-All";
         }
-        if (P1point==P2point && P1point>=3)
-            score = "Deuce";
+        
+        if (P1point == P2point && P1point >= 3) 
+        {
+        	score = "Deuce";
+        }
         
         if (P1point != P2point && P1point < 4 && P2point < 4)
         {
@@ -34,21 +38,21 @@ public class TennisGame2 implements TennisGame
         
         if (P1point > P2point && P2point >= 3)
         {
-        	score = "Advantage " + player1Name;
+            score = "Advantage " + player1Name;
         }
         
         if (P2point > P1point && P1point >= 3)
         {
-        	score = "Advantage " + player2Name;
+            score = "Advantage " + player2Name;
         }
         
-        if (P1point>=4 && (scoreDiff)>=2)
+        if (P1point >= 4 && (scoreDiff) >= 2)
         {
-            score = "Win for player1";
+            score = "Win for " + player1Name;
         }
-        if (P2point>=4 && -(scoreDiff)>=2)
+        if (P2point >= 4 && -(scoreDiff) >= 2)
         {
-            score = "Win for player2";
+            score = "Win for " + player2Name;
         }
         return score;
     }
