@@ -1,7 +1,7 @@
 
 public class TennisGame2 implements TennisGame
 {
-    //2nd commit and push...
+    //3rd commit and push...
     public int P1point = 0;
     public int P2point = 0;
     
@@ -69,19 +69,13 @@ public class TennisGame2 implements TennisGame
     
     public void SetP1Score(int number){
         
-        for (int i = 0; i < number; i++)
-        {
-        	P1point++;
-        }
+    	P1point += number;
             
     }
     
     public void SetP2Score(int number){
         
-        for (int i = 0; i < number; i++)
-        {
-        	P2point++;
-        }
+    	P2point += number;
             
     }
     
