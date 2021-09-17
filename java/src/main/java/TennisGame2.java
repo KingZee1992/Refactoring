@@ -1,7 +1,7 @@
 
 public class TennisGame2 implements TennisGame
 {
-    //First major commit and push...
+    //2nd commit and push...
     public int P1point = 0;
     public int P2point = 0;
     
@@ -71,7 +71,7 @@ public class TennisGame2 implements TennisGame
         
         for (int i = 0; i < number; i++)
         {
-            P1Score();
+        	P1point++;
         }
             
     }
@@ -80,23 +80,16 @@ public class TennisGame2 implements TennisGame
         
         for (int i = 0; i < number; i++)
         {
-            P2Score();
+        	P2point++;
         }
             
     }
     
-    public void P1Score(){
-        P1point++;
-    }
-    
-    public void P2Score(){
-        P2point++;
-    }
 
     public void wonPoint(String player) {
         if (player == "player1")
-            P1Score();
+        	P1point++;
         else
-            P2Score();
+        	P2point++;
     }
 }
